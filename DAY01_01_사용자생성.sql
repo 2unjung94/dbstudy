@@ -20,7 +20,7 @@
             GRANT CONNECT, RESOURCE TO 계정이름;
         3) 관리자 권한 부여
             GRANT DBA TO 계정이름;
-            (DBA: DataBase Adiministor)
+            (DBA: DataBase Adiministrator)
     
 */
 /*
