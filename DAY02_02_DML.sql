@@ -97,3 +97,53 @@ INSERT INTO EMPLOYEE_T VALUES(EMPLOYEE_SEQ.NEXTVAL, '한성일', 2, '과장', 'M
 
 -- 커밋
 COMMIT;
+
+/*
+    수정
+    
+    UPDATE 테이블명 SET 업데이트할내용, 업데이트할내용, ... WHERE 조건식
+    
+*/
+
+-- 1. DEPARTMENT_T에서 부서번호(DEPT_NO)가 3인 부서의 지역(DEPT_LOCATION)을 '인천'으로 수정하시오
+UPDATE DEPARTMENT_T 
+   SET DEPT_LOCATION = '인천' --SET절의 등호(=)는 대입 연산자
+ WHERE DEPT_NO = 3;           --WHERE절의 등호(=)는 동등비교 연산자
+
+-- 2. EMPLOYEE_T에서 부서번호(DEPART)가 2인 부서의 사원들의 기본급(SALARY)을 10% 인상하시오.
+UPDATE EMPLOYEE_T
+   SET SALARY = SALARY * 1.1 -- *연산자 먼저 계산하여 앞으로 보냄.
+ WHERE DEPART = 2;
+
+-- 롤백
+ROLLBACK; -- 이전 커밋으로 돌아감. 즉 현재는 UPDATE 2가지는 취소됨.
+
+
+/*
+    삭제
+
+    DELETE FROM 테이블명 WHERE 조건식
+*/
+-- 1. DEPARTMENT_T에서 부서번호(DEPT_NO)가 3인 부서를 삭제하시오. (부서번호가 3인 사원은 없다. 참조 무결성에 영향을 미치지 않는다.)
+DELETE 
+  FROM DEPARTMENT_T 
+ WHERE DEPT_NO = 3;
+
+-- 2. EMPLOYEE_T에서 부서번호(DEPART)가 1과 4인 부서를 삭제하시오.
+DELETE 
+  FROM EMPLOYEE_T 
+ WHERE DEPART = 1 OR DEPART = 4;  -- WHERE DEPART IN(1, 4)
+
+-- 3. DEPARTMENT_T에서 부서번호(DEPT_NO)가 2인 부서를 삭제하시오. (부서번호가 2인 사원이 있다. 부서가 없어지면 사원 정보가 참조 무결성에 위배된다. 참조 무결성 위배에 대비해서 ON DELETE SET NULL 옵션을 주었으므로 사원 테이블의 부서번호가 NULL로 함께 수정된다.)
+DELETE 
+  FROM DEPARTMENT_T 
+ WHERE DEPT_NO = 2;
+ 
+-- 롤백
+ROLLBACK;
+
+
+
+
+
+
