@@ -1,6 +1,6 @@
 /*
     DML 
-    1. Data Maniqulation Language
+    1. Data Manipulation Language
     2. 데이터 조작어
     3. 데이터(행, Row)를 다루는 언어이다.
     4. 트랜잭션 처리가 필요하다.
@@ -21,7 +21,7 @@
         회원 탈퇴
         1) 회원 데이터 지우기
         2) 탈퇴회원 명단에 올리기
-    ** TCL(TRANJECTION CONTROLLAR LANGUNAGE) : COMMIT, ROLLBACK
+    ** TCL(TRANSACTION CONTROL LANGUNAGE) : COMMIT, ROLLBACK
 */
 
 /*
@@ -31,7 +31,7 @@
     3. 함수
         1) 새 번호 생성하기   : NEXTVAL
         2) 현재 번호 확인하기 : CURRVAL
-    4. 생성할 때 옵션중 NOCASH정도만 사용.
+    4. 생성할 때 옵션중 NOCACHE정도만 사용.
 */
 
 -- 시퀀스 삭제(시퀀스들은 관계를 맺는게 없으므로 그냥 지우면 됨)
