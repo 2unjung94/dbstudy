@@ -44,6 +44,6 @@ SELECT EMP_NO
         WHEN DEPART = 2 THEN '인사부'
         WHEN DEPART = 3 THEN '총무부'
         WHEN DEPART = 4 THEN '기획부'
-        ELSE 'Unknown'
+        ELSE 'Unknown' 
        END AS 부서명
   FROM EMPLOYEE_T;

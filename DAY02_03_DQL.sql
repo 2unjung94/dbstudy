@@ -25,7 +25,7 @@ SELECT DEPARTMENT_T.DEPT_NO, DEPARTMENT_T.DEPT_NAME, DEPARTMENT_T.DEPT_LOCATION
   FROM DEPARTMENT_T;
   
 SELECT D.DEPT_NO, D.DEPT_NAME, D.DEPT_LOCATION
-  FROM DEPARTMENT_T D; -- 테이블의 별명(ALIAS)을 D로 지정
+  FROM DEPARTMENT_T D; -- 테이블의 별명(ALIAS)을 D로 지정, JOIN에서 특히 사용됨.
   
 -- 2. 부서 테이블의 모든 칼럼을 조회하시오. 조회할 칼럼명을 '부서번호', '부서명', '위치'로 지정하시오.
 SELECT DEPT_NO AS 부서번호    -- 칼럼의 별명(ALIAS)을 부서번호로 지정

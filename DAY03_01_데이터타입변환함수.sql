@@ -7,6 +7,8 @@
     4. DUMMY 칼럼
        X     값
 */
+SELECT *
+FROM    DUAL;
 
 /*
     1. 문자 -> 숫자 변환
@@ -14,7 +16,7 @@
         TO_NUMBER('123') OOO
         TO_NUMBER('ABC') XXX
 */
-SELECT '100',TO_NUMBER('100') -- 문자 : 왼쪽 정렬, 숫자 : 오른쪽 정렬
+SELECT '100',TO_NUMBER('100') AS 숫자변환-- 문자 : 왼쪽 정렬, 숫자 : 오른쪽 정렬
   FROM DUAL;
 
 -- 아래 쿼리는 
