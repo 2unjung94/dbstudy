@@ -41,6 +41,7 @@ SELECT D.DEPT_NAME AS 부서명
         SELECT 조회할 칼럼, ...
           FORM 테이블1 RIGHT [OUTER] JOIN JOIN 테이블 2
             ON 조인조건
+    ** 더 적은 테이블을 추출하는 ㅌ테이블을 드라이빙 테이블로 삼는 것이 좋다.
 */
 
 -- 외부 조인 확인을 위한 데이터 입력
